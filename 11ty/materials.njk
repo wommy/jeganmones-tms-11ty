@@ -1,0 +1,30 @@
+---
+layout: _base
+title: materials
+
+# materials:
+#  - blanks
+#  - arts
+#  - laminates
+#  bags: 0
+
+---
+
+<main class="w-1/2 mx-auto">
+	<h1>{{title}}</h1>
+
+	<p>
+		{% for name in materials %}
+		<div>
+			<div>{{name}}</div>
+		</div>	
+		{% endfor %}
+		<div id="demo"></div>
+	</p>
+
+	<p>
+		<input type="text" id="textinput">
+		<button onclick="appendYAML">Append</button>
+	</p>
+
+</main>

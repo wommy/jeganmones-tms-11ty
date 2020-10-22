@@ -1,0 +1,100 @@
+---
+layout: _base
+todo: 
+  - turn dashboard into include
+categories:
+  materials: 
+    blank: 0
+    art: 0
+    laminate: 0
+    bags: 0
+products:
+  lighter: 0
+  tycard: 0
+  mailer: 0
+orders: 
+  1: 
+    - lighter
+    - lighter
+  2:
+    - lighter
+    - lighter
+    - lighter
+materialArr: 
+  lighter: 
+    - blank
+    - art
+    - laminate
+    - bag
+  tycard:
+    - thankyoucard
+    - thankyouenvelope
+  mailer:
+    - lightersArr
+    - tycard
+    - stickerA
+    - stickerB
+    - miniprint
+---
+<main class="w-3/4 mx-auto">
+  <h1>dashboard</h1>
+
+  <script>
+    Storage.prototype.setObj = (key, obj) => localStorage.setItem(key, JSON.stringify(obj))
+
+    Storage.prototype.getObj = key => JSON.parse(this.getItem(key))
+
+    function addMaterial() {
+      localStorage.matArr = [
+ ]     localStorage.matArr += document.getElementById("input").value
+      document.getElementById("change").innerHTML = localStorage.matArr
+    }
+  </script>
+
+  <div id="change"></div>
+
+  <div>
+    <input type="text" id='input'>
+    <button onclick="addMaterial()">add material</button>
+  </div>
+
+  <div>
+    <script>
+      
+    </script>
+  </div>
+
+{#
+  <div class="grid grid-cols-3">
+    {% for cat, items in categories %}
+    <div class="mx-auto">
+      <h2>{{cat}}</h2>
+      {% for key, quantity in items %}
+      <p class="flex">
+        <span>{{ quantity }}</span>
+        <span>:</span>
+        <span>{{ key }}</span>
+      </p>
+      {% endfor %}
+    </div> 
+    {% endfor %}
+  </div>
+#}
+
+</main>
+{#
+
+
+<div class="w-2/3 mx-auto">
+  {% for cat in categories %}
+  <div class="flex">
+    <p>{{cat}}</p>
+    <div class="flex justify-between">
+      <p>create</p>
+      <p>update</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+#}
+
