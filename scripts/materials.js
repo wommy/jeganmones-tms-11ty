@@ -35,12 +35,20 @@ materials.push(
 // createMaterial("lighter_bag");
 // console.log(createMaterial("lighter_bag"));
 
+// display material array
 console.log(materials);
 
-console.log`adding Quantity`
+// for each in materialArray
+// display name: quantity
+
+
+
+console.log( 'to the First Name: ' + materials[0].name )
+console.log( 'adding Quantity: ' + 1000 )
 materials[0].quantity.push(1000);
 
-console.log( materials[0].quantity.reduce(( total, amount ) => total + amount ) )
 
-console.log`to Material.Name`
-console.log( materials[0].name )
+materials[0].quantity.reduce(( total, amount ) => total + amount )
+
+// show more totals
+console.log(materials);
